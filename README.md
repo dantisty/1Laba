@@ -1,4 +1,3 @@
-cat > environment.yml << 'EOF'
 name: env_anaconda
 channels:
   - conda-forge
@@ -6,12 +5,17 @@ channels:
 dependencies:
   - python=3.11
   - numpy
-  - scikit-learn
-  - matplotlib
-  - seaborn  
   - pandas
+  - scikit-learn=1.3
+  - matplotlib
+  - seaborn
   - bottleneck
   - pip
   - pip:
-    - dash
-EOF
+      - dash==3.2.0
+      - plotly==6.3.0
+      - flask
+      - requests
+      - blinker
+      - click
+      - jinja2
